@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #calendarContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .calendar-cell {
+    border: 2px solid #333;
+    padding: 20px;
+    text-align: center;
+    color: silver;
+    font-size: 1.1em;
+    cursor: pointer;
+    /* Unscratched cells appear silver */
+    background-color: silver;
+    user-select: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .calendar-cell.scratched {
+    /* When scratched, change to a lighter background */
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .calendar-cell.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    color: silver;
+  }
+  
+  /* Consolidated info area below the calendar */
+  .info-display {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid #333;
+  }
+  
